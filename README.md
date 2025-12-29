@@ -32,13 +32,5 @@
 
 ---
 
-<h2 align="center">📊 GitHub Stats</h2>
 
-<p align="center">
-  ![Ritik's GitHub stats](https://github-readme-stats.vercel.app/api?username=ritik5504&show_icons=true&theme=tokyonight)
-</p>
-
-<p align="center">
-  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ritik5504&layout=compact&theme=tokyonight)
-</p>
 
