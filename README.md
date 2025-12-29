@@ -1,7 +1,7 @@
 <h1 align="center">$ whoami → Ritik</h1>
 
 <p align="center">
-  <img src="archipics.png" width="85%" />
+  <img src="archipics.png" width="85%" alt="Developer workspace" />
 </p>
 
 <p align="center"><i>Building scalable backend systems & learning every day</i></p>
@@ -20,7 +20,6 @@
       alt="LinkedIn"
     />
   </a>
-
   <a href="mailto:rajritik34@gmail.com">
     <img
       src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white"
@@ -28,6 +27,11 @@
     />
   </a>
 </p>
+
+---
+
+<h2 align="center">📊 GitHub Stats</h2>
+
 <p align="center">
   <img
     src="https://github-readme-stats.vercel.app/api?username=ritik5504&show_icons=true&theme=tokyonight&cache_seconds=86400"
@@ -41,8 +45,3 @@
     alt="Top languages"
   />
 </p>
-
-
-<h2 align="center">📊 GitHub Stats</h2>
-
-
