@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com/in/YOUR-LINK](https://www.linkedin.com/in/ritik5504/">
+  <a href="https://www.linkedin.com/in/ritik5504/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin">
   </a>
   <a href="mailto:rajritik34@gmail.com">
