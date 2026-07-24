@@ -1,0 +1,12 @@
+{
+  "name": "ritik5504-profile-generator",
+  "version": "1.0.0",
+  "description": "Generates animated cyberpunk profiles and jet contribution heatmaps",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "generate": "node generate.mjs"
+  }
+}

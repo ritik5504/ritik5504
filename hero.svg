@@ -1,0 +1,258 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="480" viewBox="0 0 850 480">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#0b1528" />
+      <stop offset="60%" stop-color="#030816" />
+      <stop offset="100%" stop-color="#01030a" />
+    </radialGradient>
+
+    <!-- Digital Grid Pattern -->
+    <pattern id="digitalGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00f2fe" stroke-width="0.5" stroke-opacity="0.08" />
+      <circle cx="0" cy="0" r="1" fill="#00f2fe" fill-opacity="0.2" />
+    </pattern>
+
+    <!-- Neon Glow Filter -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="blueGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Linear Gradients for UI Elements -->
+    <linearGradient id="neonCyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+
+    <linearGradient id="progressBarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+
+    <linearGradient id="scanlineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0" />
+      <stop offset="45%" stop-color="#00f2fe" stop-opacity="0.03" />
+      <stop offset="50%" stop-color="#00f2fe" stop-opacity="0.3" />
+      <stop offset="55%" stop-color="#00f2fe" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Typography styling -->
+    <style>
+      .term-text {
+        font-family: 'Courier New', Consolas, monospace;
+        font-size: 15px;
+        font-weight: bold;
+        fill: #e2e8f0;
+      }
+      .prompt { fill: #38bdf8; }
+      .cyan-accent { fill: #00f2fe; }
+      .green-accent { fill: #4ade80; }
+      .gray-text { fill: #64748b; }
+      .title-text { fill: #3b82f6; letter-spacing: 2px; }
+      
+      .cursor {
+        fill: #00f2fe;
+      }
+      
+      .bar-bg { fill: #0f172a; stroke: #1e293b; stroke-width: 1; }
+    </style>
+
+    <!-- Sequential Typing Reveal Clip Paths -->
+    <!-- Line 0: Header Line -->
+    <clipPath id="lc0"><rect x="40" y="60" width="0" height="30"><animate attributeName="width" from="0" to="770" dur="0.2s" begin="0.2s" fill="freeze" /></rect></clipPath>
+    <!-- Line 1: Prompt & Name -->
+    <clipPath id="lc1"><rect x="40" y="85" width="0" height="30"><animate attributeName="width" from="0" to="770" dur="1.0s" begin="0.4s" fill="freeze" /></rect></clipPath>
+    <!-- Line 2: Initializing -->
+    <clipPath id="lc2"><rect x="40" y="110" width="0" height="30"><animate attributeName="width" from="0" to="770" dur="0.8s" begin="1.4s" fill="freeze" /></rect></clipPath>
+    <!-- Line 3: Loading Skills -->
+    <clipPath id="lc3"><rect x="40" y="135" width="0" height="30"><animate attributeName="width" from="0" to="770" dur="0.8s" begin="2.2s" fill="freeze" /></rect></clipPath>
+    <!-- Line 4: Divider -->
+    <clipPath id="lc4"><rect x="40" y="160" width="0" height="30"><animate attributeName="width" from="0" to="770" dur="0.2s" begin="3.0s" fill="freeze" /></rect></clipPath>
+    <!-- Line 5: React.js -->
+    <clipPath id="lc5"><rect x="40" y="185" width="0" height="30"><animate attributeName="width" from="0" to="770" dur="0.7s" begin="3.2s" fill="freeze" /></rect></clipPath>
+    <!-- Line 6: Node.js -->
+    <clipPath id="lc6"><rect x="40" y="210" width="0" height="30"><animate attributeName="width" from="0" to="770" dur="0.7s" begin="3.9s" fill="freeze" /></rect></clipPath>
+    <!-- Line 7: Next.js -->
+    <clipPath id="lc7"><rect x="40" y="235" width="0" height="30"><animate attributeName="width" from="0" to="770" dur="0.7s" begin="4.6s" fill="freeze" /></rect></clipPath>
+    <!-- Line 8: MongoDB -->
+    <clipPath id="lc8"><rect x="40" y="260" width="0" height="30"><animate attributeName="width" from="0" to="770" dur="0.7s" begin="5.3s" fill="freeze" /></rect></clipPath>
+    <!-- Line 9: AI -->
+    <clipPath id="lc9"><rect x="40" y="285" width="0" height="30"><animate attributeName="width" from="0" to="770" dur="0.7s" begin="6.0s" fill="freeze" /></rect></clipPath>
+    <!-- Line 10: C++ -->
+    <clipPath id="lc10"><rect x="40" y="310" width="0" height="30"><animate attributeName="width" from="0" to="770" dur="0.7s" begin="6.7s" fill="freeze" /></rect></clipPath>
+    <!-- Line 11: DSA -->
+    <clipPath id="lc11"><rect x="40" y="335" width="0" height="30"><animate attributeName="width" from="0" to="770" dur="0.7s" begin="7.4s" fill="freeze" /></rect></clipPath>
+    <!-- Line 12: Divider -->
+    <clipPath id="lc12"><rect x="40" y="360" width="0" height="30"><animate attributeName="width" from="0" to="770" dur="0.2s" begin="8.1s" fill="freeze" /></rect></clipPath>
+    <!-- Line 13: Success msg -->
+    <clipPath id="lc13"><rect x="40" y="385" width="0" height="40"><animate attributeName="width" from="0" to="770" dur="1.2s" begin="8.3s" fill="freeze" /></rect></clipPath>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="850" height="480" rx="16" fill="url(#bgGlow)" />
+  <rect width="850" height="480" rx="16" fill="url(#digitalGrid)" />
+
+  <!-- Outer Cyberpunk Glowing Frame -->
+  <rect x="15" y="15" width="820" height="450" rx="12" fill="none" stroke="url(#neonCyanBlue)" stroke-width="2.5" filter="url(#cyanGlow)" opacity="0.8">
+    <animate attributeName="opacity" values="0.7;0.95;0.7" dur="4s" repeatCount="indefinite" />
+  </rect>
+
+  <!-- Floating Blue Particles -->
+  <g id="particles" opacity="0.6">
+    <circle cx="80" cy="180" r="2" fill="#00f2fe" filter="url(#blueGlow)"><animate attributeName="cy" values="180;60;180" dur="6s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.2;1;0.2" dur="6s" repeatCount="indefinite" /></circle>
+    <circle cx="210" cy="380" r="1.5" fill="#3b82f6" filter="url(#blueGlow)"><animate attributeName="cy" values="380;200;380" dur="8s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.1;0.9;0.1" dur="8s" repeatCount="indefinite" /></circle>
+    <circle cx="620" cy="110" r="2.5" fill="#00f2fe" filter="url(#blueGlow)"><animate attributeName="cy" values="110;280;110" dur="7s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.3;0.8;0.3" dur="7s" repeatCount="indefinite" /></circle>
+    <circle cx="750" cy="300" r="2" fill="#7c3aed" filter="url(#blueGlow)"><animate attributeName="cy" values="300;120;300" dur="9s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.2;1;0.2" dur="9s" repeatCount="indefinite" /></circle>
+    <circle cx="130" cy="320" r="3" fill="#3b82f6" filter="url(#blueGlow)"><animate attributeName="cy" values="320;180;320" dur="7.5s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.15;0.85;0.15" dur="7.5s" repeatCount="indefinite" /></circle>
+    <circle cx="690" cy="400" r="2" fill="#00f2fe" filter="url(#blueGlow)"><animate attributeName="cy" values="400;220;400" dur="6.5s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.25;0.95;0.25" dur="6.5s" repeatCount="indefinite" /></circle>
+  </g>
+
+  <!-- Terminal Title Bar -->
+  <g id="titleBar">
+    <path d="M 16 27 A 10 10 0 0 1 26 17 L 824 17 A 10 10 0 0 1 834 27 L 834 47 L 16 47 Z" fill="#020617" fill-opacity="0.9" />
+    <circle cx="36" cy="32" r="5" fill="#ef4444" />
+    <circle cx="54" cy="32" r="5" fill="#eab308" />
+    <circle cx="72" cy="32" r="5" fill="#22c55e" />
+    <text x="425" y="37" text-anchor="middle" font-family="'Courier New', Consolas, monospace" font-size="12" font-weight="bold" class="title-text">GHOST-TERMINAL v1.0.4</text>
+    <line x1="16" y1="47" x2="834" y2="47" stroke="url(#neonCyanBlue)" stroke-width="1.2" opacity="0.6" />
+  </g>
+
+  <!-- Terminal Display Content Area -->
+  <g transform="translate(20, 0)">
+    
+    <!-- Line 0: Header Border -->
+    <g clip-path="url(#lc0)">
+      <text x="40" y="80" class="term-text gray-text">+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=</text>
+    </g>
+
+    <!-- Line 1: Prompt & Name -->
+    <g clip-path="url(#lc1)">
+      <text x="40" y="105" class="term-text"><tspan class="prompt">&gt; </tspan>Ritik Singh<tspan class="cyan-accent">.initialize()</tspan></text>
+    </g>
+    <!-- Prompt Cursor Blinking -->
+    <rect x="235" y="91" width="10" height="17" class="cursor" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;0;1;0" keyTimes="0;0.12;0.13;0.5;0.75;1" dur="1.2s" begin="1.4s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Line 2: Initializing -->
+    <g clip-path="url(#lc2)">
+      <text x="40" y="130" class="term-text gray-text">[<tspan class="green-accent">SUCCESS</tspan>] Core identity loaded. Locating developer profile...</text>
+    </g>
+
+    <!-- Line 3: Loading Skills -->
+    <g clip-path="url(#lc3)">
+      <text x="40" y="155" class="term-text"><tspan class="cyan-accent">loading_skills</tspan> --verbose</text>
+    </g>
+
+    <!-- Line 4: Divider -->
+    <g clip-path="url(#lc4)">
+      <text x="40" y="180" class="term-text gray-text">--------------------------------------------------------------------------</text>
+    </g>
+
+    <!-- Skills and Progress Bars -->
+    <!-- Line 5: React.js -->
+    <g clip-path="url(#lc5)">
+      <text x="40" y="205" class="term-text">React.js      </text>
+      <!-- Custom Segmented Progress Bar -->
+      <rect x="180" y="193" width="220" height="14" rx="3" class="bar-bg" />
+      <rect x="183" y="196" width="0" height="8" rx="2" fill="url(#progressBarGrad)" filter="url(#blueGlow)">
+        <animate attributeName="width" from="0" to="176" dur="0.6s" begin="3.2s" fill="freeze" />
+      </rect>
+      <text x="415" y="205" class="term-text cyan-accent">80% [████████░░]</text>
+    </g>
+
+    <!-- Line 6: Node.js -->
+    <g clip-path="url(#lc6)">
+      <text x="40" y="230" class="term-text">Node.js       </text>
+      <rect x="180" y="218" width="220" height="14" rx="3" class="bar-bg" />
+      <rect x="183" y="221" width="0" height="8" rx="2" fill="url(#progressBarGrad)" filter="url(#blueGlow)">
+        <animate attributeName="width" from="0" to="176" dur="0.6s" begin="3.9s" fill="freeze" />
+      </rect>
+      <text x="415" y="230" class="term-text cyan-accent">80% [████████░░]</text>
+    </g>
+
+    <!-- Line 7: Next.js -->
+    <g clip-path="url(#lc7)">
+      <text x="40" y="255" class="term-text">Next.js       </text>
+      <rect x="180" y="243" width="220" height="14" rx="3" class="bar-bg" />
+      <rect x="183" y="246" width="0" height="8" rx="2" fill="url(#progressBarGrad)" filter="url(#blueGlow)">
+        <animate attributeName="width" from="0" to="154" dur="0.6s" begin="4.6s" fill="freeze" />
+      </rect>
+      <text x="415" y="255" class="term-text cyan-accent">70% [███████░░░]</text>
+    </g>
+
+    <!-- Line 8: MongoDB -->
+    <g clip-path="url(#lc8)">
+      <text x="40" y="280" class="term-text">MongoDB       </text>
+      <rect x="180" y="268" width="220" height="14" rx="3" class="bar-bg" />
+      <rect x="183" y="271" width="0" height="8" rx="2" fill="url(#progressBarGrad)" filter="url(#blueGlow)">
+        <animate attributeName="width" from="0" to="176" dur="0.6s" begin="5.3s" fill="freeze" />
+      </rect>
+      <text x="415" y="280" class="term-text cyan-accent">80% [████████░░]</text>
+    </g>
+
+    <!-- Line 9: AI -->
+    <g clip-path="url(#lc9)">
+      <text x="40" y="305" class="term-text">AI            </text>
+      <rect x="180" y="293" width="220" height="14" rx="3" class="bar-bg" />
+      <rect x="183" y="296" width="0" height="8" rx="2" fill="url(#progressBarGrad)" filter="url(#blueGlow)">
+        <animate attributeName="width" from="0" to="154" dur="0.6s" begin="6.0s" fill="freeze" />
+      </rect>
+      <text x="415" y="305" class="term-text cyan-accent">70% [███████░░░]</text>
+    </g>
+
+    <!-- Line 10: C++ -->
+    <g clip-path="url(#lc10)">
+      <text x="40" y="330" class="term-text">C++           </text>
+      <rect x="180" y="318" width="220" height="14" rx="3" class="bar-bg" />
+      <rect x="183" y="321" width="0" height="8" rx="2" fill="url(#progressBarGrad)" filter="url(#blueGlow)">
+        <animate attributeName="width" from="0" to="198" dur="0.6s" begin="6.7s" fill="freeze" />
+      </rect>
+      <text x="415" y="330" class="term-text cyan-accent">90% [█████████░]</text>
+    </g>
+
+    <!-- Line 11: DSA -->
+    <g clip-path="url(#lc11)">
+      <text x="40" y="355" class="term-text">DSA           </text>
+      <rect x="180" y="343" width="220" height="14" rx="3" class="bar-bg" />
+      <rect x="183" y="346" width="0" height="8" rx="2" fill="url(#progressBarGrad)" filter="url(#blueGlow)">
+        <animate attributeName="width" from="0" to="198" dur="0.6s" begin="7.4s" fill="freeze" />
+      </rect>
+      <text x="415" y="355" class="term-text cyan-accent">90% [█████████░]</text>
+    </g>
+
+    <!-- Line 12: Divider -->
+    <g clip-path="url(#lc12)">
+      <text x="40" y="380" class="term-text gray-text">--------------------------------------------------------------------------</text>
+    </g>
+
+    <!-- Line 13: Success message -->
+    <g clip-path="url(#lc13)">
+      <text x="40" y="405" class="term-text green-accent">&gt; PROFILE LOAD COMPLETE.</text>
+      <text x="40" y="425" class="term-text cyan-accent">System Online. Let's build something epic.</text>
+    </g>
+    <!-- Final cursor blinking at end of text -->
+    <rect x="382" y="411" width="10" height="17" class="cursor" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;0;1;0" keyTimes="0;0.01;0.02;0.5;0.75;1" dur="1.2s" begin="9.5s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- Moving Cyberpunk Scanline Overlay -->
+  <rect x="16" y="48" width="818" height="414" fill="url(#scanlineGrad)" opacity="0.8" style="mix-blend-mode: screen; pointer-events: none;">
+    <animateTransform attributeName="transform" type="translate" from="0 -420" to="0 420" dur="5s" repeatCount="indefinite" />
+  </rect>
+</svg>
